@@ -23,16 +23,27 @@ const jirasArray = [];
 for (let i = 0; i < jiraLinks.length; i++) {
   jirasArray.push({
     link: jiraLinks[i],
-    title: jiraTitles[i]
+    title: jiraTitles[i],
   });
 }
 
-const iterateLinks = jiraLinks.forEach((links)=>{console.log(links)});
-const iterateTitle = jiraTitles.forEach((titles)=>{console.log(titles)});
+jirasArray.forEach((element) => {
+  console.log("jira: ", element);
+  let listItem = document.createElement("li");
+  let listElement = document.querySelector(".grid-container");
+  listElement.prepend(listItem);
+});
+
+const iterateLinks = jiraLinks.forEach((links) => {
+  console.log(links);
+});
+const iterateTitle = jiraTitles.forEach((titles) => {
+  console.log(titles);
+});
 
 console.log("jiraTitles", jiraTitles);
 console.log("jiraLinks", jiraLinks);
-console.log("jirasArray", jirasArray);
+// console.log("jirasArray", jirasArray);
 
 modalButton.addEventListener("click", () => {
   console.log("clicked button!!");
