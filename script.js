@@ -38,23 +38,19 @@ jirasArray.forEach((element) => {
   </li>`;
 
   listItem.innerHTML = myLiterals; // Assigning myLiterals to innerHTML of listItem
-  listElement.append(listItem);   // Appending listItem to listElement
+  listElement.append(listItem); // Appending listItem to listElement
 });
 
-const iterateLinks = jiraLinks.forEach((links) => {
-  console.log(links);
-});
-const iterateTitle = jiraTitles.forEach((titles) => {
-  console.log(titles);
-});
-
-console.log("jiraTitles", jiraTitles);
-console.log("jiraLinks", jiraLinks);
-// console.log("jirasArray", jirasArray);
+function loadData() {
+  setTimeout(() => {
+    console.log("Data Loaded");
+  }, 1000);
+}
 
 modalButton.addEventListener("click", () => {
   console.log("clicked button!!");
   modalContainer.classList.toggle("hidden");
+  loadData();
 });
 
 closeModalButton[0].addEventListener("click", () => {
